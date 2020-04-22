@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'data_source.dart';
-import 'package:covid_19/pages/homepage.dart';
+
+import 'pages/splash.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Circular",
         primaryColor: primaryBlack,
       ),
-      home: MyHomePage(),
+      home: SplashScreen(),
     );
   }
 }
