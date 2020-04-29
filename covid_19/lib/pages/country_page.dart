@@ -1,3 +1,4 @@
+import 'package:covid_19/pages/search.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -29,7 +30,14 @@ class _CountryPageState extends State<CountryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xff2AD1FE).withOpacity(0.9),
         title: Text('Country Stats'),
+
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.search), onPressed: (){
+            showSearch(context: context, delegate: Search(countryData));
+          })
+        ],
       ),
       body: countryData == null
           ? Center(
@@ -42,9 +50,9 @@ class _CountryPageState extends State<CountryPage> {
                   margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   decoration: BoxDecoration(color: Colors.white, boxShadow: [
                     BoxShadow(
-                        color: Colors.grey[100],
+                        color: Colors.grey[300],
                         blurRadius: 10,
-                        offset: Offset(0, 10)),
+                        offset: Offset(5, 10)),
                   ]),
                   child: Row(
                     children: <Widget>[

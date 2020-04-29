@@ -4,10 +4,10 @@ import 'package:covid_19/widgets/infopanel.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:covid_19/data_source.dart';
-import 'package:covid_19/widgets/worldwide_panel.dart';
-
 import 'country_page.dart';
 import 'package:intl/intl.dart';
+
+
 
 
 //TODO : refactor home page
@@ -374,7 +374,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               Text(
                                 f
-                                    .format(affectedCountries[0]["deaths"])
+                                    .format(affectedCountries[1]["deaths"])
                                     .toString(),
                                 style: TextStyle(
                                     fontSize: 15,
@@ -429,7 +429,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               Text(
                                 f
-                                    .format(affectedCountries[0]["deaths"])
+                                    .format(affectedCountries[2]["deaths"])
                                     .toString(),
                                 style: TextStyle(
                                     fontSize: 15,
@@ -446,7 +446,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
 
-            // --------------------------- See more ----------------------------------
+            // --------------------------- See more Button ----------------------------------
 
             GestureDetector(
               onTap: (){
